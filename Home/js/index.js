@@ -1,4 +1,4 @@
-var URL = 'http://176.122.153.17:8080/appProject/';
+var URL = '../';
 
 (function () {
   imgBackground = new Image(); //每次加载完都会绘制一次图片
