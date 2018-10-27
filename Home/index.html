@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <title>移动端项目目录</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script>
+    ;(function () {
+      var defaultW = 750, u = navigator.userAgent;
+      if (/(Android)/i.test(u)) { //Android
+        // var version = u.substr(u.indexOf('Android') + 8, 3);
+        // if (version > 2.3) {
+        //   var phoneScale = parseInt(window.screen.width) / defaultW;
+        //   document.write('<meta name="viewport" content=" user-scalable=no, width=' + defaultW + '", minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        // } else {
+        //   document.write('<meta name="viewport" content="width=' + defaultW + '">');
+        // }
+      } else if (/(iPhone|iPad|iPod|iOS)/i.test(u)) {  //ios
+        // document.write('<meta name="viewport" content="width=' + defaultW + ', user-scalable=no">');
+      } else {
+        document.write('<style>.box{width: 750px!important;min-height:1200px!important; transform:scale(0.4,0.4); -webkit-transform:scale(0.4,0.4); webkit-transform-origin: 50% 30px;transform-origin: 50% 30px}</style>');
+      }
+
+    })();
+  </script>
+</head>
+<body>
+<div class="box">
+  <div class="content">
+    <a class="title" data-name="shengdanzhufu">圣诞祝福</a>
+    <a class="title" data-name="nianzhongjiang">年终奖</a>
+    <a class="title" data-name="2048Game">2048小游戏</a>
+    <a class="title" data-name="chunyunqiangpiao">春运抢票</a>
+    <a class="title" data-name="xiaoniujizan">小牛抽奖</a>
+  </div>
+  <div class="tips">提示：项目有声音，公众场合记得关音量哦</div>
+</div>
+<script src="./js/fontbase.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
