@@ -1,10 +1,11 @@
-.game-box{
+body,.game-box{
   height: 100%;
   overflow: hidden;
 }
 .game{
   margin: auto;
   height: 100%;
+  overflow: hidden;
 }
 header {
   display: block;
