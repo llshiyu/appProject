@@ -163,7 +163,8 @@ if (isAndroid || isIos) {
       case 4://right
         moveRight();
         break;
-      default: break;
+      default:
+        break;
     }
     if (1 === needNewPoint) {
       generateOneUseablePoint();
@@ -197,17 +198,20 @@ if (isAndroid || isIos) {
       default:
         break;
     }
-    if (1 === needNewPoint) {
-      generateOneUseablePoint();
-      needNewPoint = 0;
-    }
     updateBoardView();
     if (isgameover()) {
       alert("game over!");
     }
+    if (1 === needNewPoint) {
+      generateOneUseablePoint();
+      needNewPoint = 0;
+    }
     print();
   });
+
 }
+
+// }
 
 
 function moveLeft() {
@@ -256,7 +260,7 @@ function moveAndMorge(x, y, dx, dy) {
   if (board[x + dx][y + dy] !== 0 && board[x][y] !== board[x + dx][y + dy]) {
     return;
   }
-  console.log("x:", x, "y:", y, "dx:", dx, "dy:", dy);
+  // console.log("x:", x, "y:", y, "dx:", dx, "dy:", dy);
   //会发生有效行为，则需要生成新的点
   needNewPoint = 1;
 
@@ -294,23 +298,23 @@ function moveAndMorge(x, y, dx, dy) {
 //     merge(x, y);
 // }
 
-function merge(x, y) {
-  let t = false;
-  for (let i = 1; i <= mapSize; i++) {
-    for (let j = 1; j <= mapSize; j++) {
-      if (board[i + x][j + y] === board[i][j] && board[i][j] !== 0) {
-        board[i + x][j + y] += board[i][j];
-        board[i][j] = 0;
-        t = true;
-        needNewPoint = 1;
-        // showMoveAnimation(i, j, i + x, j + y);
-      }
-    }
-  }
-  if (t) {
-    move(x, y);
-  }
-}
+// function merge(x, y) {
+//   let t = false;
+//   for (let i = 1; i <= mapSize; i++) {
+//     for (let j = 1; j <= mapSize; j++) {
+//       if (board[i + x][j + y] === board[i][j] && board[i][j] !== 0) {
+//         board[i + x][j + y] += board[i][j];
+//         board[i][j] = 0;
+//         t = true;
+//         needNewPoint = 1;
+//         // showMoveAnimation(i, j, i + x, j + y);
+//       }
+//     }
+//   }
+//   if (t) {
+//     move(x, y);
+//   }
+// }
 
 //判断当前游戏是否结束
 function isgameover() {
@@ -326,6 +330,6 @@ function isgameover() {
 
 function print() {
   for (let x of board) {
-    console.log(x);
+    // console.log(x);
   }
 }
