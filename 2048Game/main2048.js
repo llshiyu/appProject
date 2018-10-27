@@ -2,7 +2,13 @@ board = [];//游戏数据
 score = 0;//游戏分数
 const mapSize = 4;//
 needNewPoint = 0;
-
+/*去掉iphone手机滑动默认行为*/
+$('body').on('touchmove touchstart', function (event) {
+  event.preventDefault();
+});
+document.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+});
 $(document).ready(function () {
   newgame();
 });
@@ -65,8 +71,8 @@ function updateBoardView() {
         theNumberCell.css('left', getPosLeft(i, j) + 50);
       }
       else {
-        theNumberCell.css('width', '100px');
-        theNumberCell.css('height', '100px');
+        theNumberCell.css('width', '5rem');
+        theNumberCell.css('height', '5rem');
         //把number-cell放到grid-cell的中间位置
         theNumberCell.css('top', getPosTop(i, j));
         theNumberCell.css('left', getPosLeft(i, j));
@@ -166,13 +172,13 @@ if (isAndroid || isIos) {
       default:
         break;
     }
-    if (1 === needNewPoint) {
-      generateOneUseablePoint();
-      needNewPoint = 0;
-    }
     updateBoardView();
     if (isgameover()) {
       alert("game over!");
+    }
+    if (1 === needNewPoint) {
+      generateOneUseablePoint();
+      needNewPoint = 0;
     }
     print();
   }, false);
