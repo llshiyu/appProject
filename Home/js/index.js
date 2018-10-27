@@ -1,4 +1,4 @@
-var URL = '../';
+var URL = './';
 
 (function () {
   imgBackground = new Image(); //每次加载完都会绘制一次图片
