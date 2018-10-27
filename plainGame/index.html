@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 飞机大战 </title>
+    <meta charset="utf-8">
+    <script>
+        ;(function () {
+            var defaultW = 750, u = navigator.userAgent;
+            if (/(Android)/i.test(u)) { //Android
+                var version = u.substr(u.indexOf('Android') + 8, 3);
+                if (version > 2.3) {
+                    var phoneScale = parseInt(window.screen.width) / defaultW;
+                    document.write('<meta name="viewport" content=" user-scalable=no, width=' + defaultW + '", minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                } else {
+                    document.write('<meta name="viewport" content="width=' + defaultW + '">');
+                }
+            } else if (/(iPhone|iPad|iPod|iOS)/i.test(u)) {  //ios
+                document.write('<meta name="viewport" content="width=' + defaultW + ', user-scalable=no">');
+            } else {
+                document.write('<style>.pack{width: 750px!important;height: 1200px!important; transform:scale(0.4,0.4); -webkit-transform:scale(0.4,0.4); webkit-transform-origin: 50% 30px;transform-origin: 50% 30px} .pack-pack{height: 500px!important;}</style>');
+            }
+
+        })();
+    </script>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            text-align: center;
+        }
+
+        .pack {
+            margin: auto;
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-image: url("./imgs/1.png");
+        }
+
+        .pack .operate {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .pack-pack {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<div class="pack-pack">
+    <div class="pack" id="pack">
+        <canvas id="canvas">
+            您的浏览器不支持canvas绘图！
+        </canvas>
+        <div class="start-pages" id="startPages" style="display: none">
+            <i class="icon icon-fvhwarplanes"></i>
+            <p class="button-icon"><span class="icon icon-easy" onclick="beginGame(true,40)"></span></p>
+            <p class="button-icon"><span class="icon icon-hard" onclick="beginGame(true,20)"></span></p>
+            <p class="button-icon"><span class="icon icon-st" onclick="hintGame()"></span></p>
+            <p class="icon icon-hint-img" id="hintImg" style="display: none"><i class="click-close"
+                                                                                onclick="closeHint()"></i></p>
+        </div>
+        <div class="operate" id="operate" style="display: none">
+            <div class="operate-title">
+                <p><i class="icon icon-score"></i><span id="score">0</span></p>
+                <p><i class="icon icon-time"></i><span id="surplusTime">60</span></p>
+                <p><i class="icon icon-hp" id="HP"></i></p>
+            </div>
+            <div class="btn" id="btn">
+                <p class="btn-l-r"><i class="icon icon-left" onmousedown="mLeft(true)" onmouseup="mLeft(false)"
+                                      ontouchstart="mLeft(true)" ontouchend="mLeft(false)"></i><i
+                        class="icon icon-right" onmousedown="mRight(true)" onmouseup="mRight(false)"
+                        ontouchstart="mRight(true)" ontouchend="mRight(false)"></i></p>
+                <p class="big-b"><i onclick="isBigChange(true)"></i><i onclick="isBigChange(false)" id="bigB"></i></p>
+                <p class="suspend"><i onclick="playOrPause(false)"></i><i onclick="playOrPause(true)" id="Pause"></i>
+                </p>
+                <p class="icom-pause"><i onmousedown="clickPause()"></i></p>
+            </div>
+        </div>
+        <div id="gameOver" style="display: none" class="game-over-pack">
+            <div class="icon icon-over"></div>
+            <p class="button-icon"><span class="icon icon-easy" onclick="beginGame(true,40)"></span></p>
+            <p class="button-icon"><span class="icon icon-hard" onclick="beginGame(true,20)"></span></p>
+        </div>
+    </div>
+</div>
+
+<audio id="bgMusic" src="./mp3/ANW2487_06_Closer.mp3" autoplay="autoplay" loop="loop">
+    您的浏览器不支持 audio 标签。
+</audio>
+<!-- <audio id="shot" src="./mp3/s1_1.mp3" autoplay="autoplay" onclick="playShot()">
+     您的浏览器不支持 audio 标签。
+ </audio>
+ <audio id="dynamite" src="./mp3/s2_2.mp3" autoplay="autoplay" onclick="playDynamite()">
+     您的浏览器不支持 audio 标签。
+ </audio>-->
+
+<script src="app_v.js"></script>
+</body>
+</html>

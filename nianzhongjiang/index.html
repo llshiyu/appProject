@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>好看视频年终奖计算器</title>
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:css css/main.css -->
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!-- 如果是在微信里运行，在页面的最上方放一张隐藏的图片，作为默认的分享图片 -->
+  <div style="display:none;">
+    <img src="img/share.jpg">
+  </div>
+
+  <!-- loading -->
+  <div class="page p0">
+    <div class="content">
+      <div class="p0-loading">
+
+      </div>
+      <div class="p0-spot-box">
+        loading<span class="ani_dot">......</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- 第1页 -->
+  <div class="page p1  ">
+    <div class="content ">
+      <div class="p1-input-box clearfix">
+        <input type="text" name="username" class="p1-input fl" placeholder="输入姓名">
+        <div class="p1-select fr p1-arrow-down p1-arrow gray-color" data-id="0">选择职业</div>
+      </div>
+      <ul class="p1-select-list-box hide">
+        <li data-id="1">运营喵</li>
+        <li data-id="2">营销狗</li>
+        <li data-id="3">产品汪</li>
+        <li data-id="4">设计狮</li>
+        <li data-id="5">程序猿</li>
+        <li data-id="6">国企“老干部”</li>
+        <li data-id="7">创业民工</li>
+        <li data-id="8">其他</li>
+      </ul>
+      <div class="p1-btn"></div>
+      <!--<div class="p1-tips-name-empty p1-tips p1-tips-name">-->
+        <!--<img src="img/p1_tips_name_empty.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="p1-tips-name-error p1-tips p1-tips-name">-->
+        <!--<img src="img/p1_tips_name_error.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="p1-tips-occupation p1-tips">-->
+        <!--<img src="img/p1_tips_occupation.png" alt="">-->
+      <!--</div>-->
+    </div>
+  </div>
+  <!-- 第2页 -->
+  <div class="page p2  ">
+    <div class="content">
+      <div class="p2-calculator-txt">
+        <div class="p2-tips1 p2-tips">你是富二代吗？</div>
+        <div class="p2-tips2 p2-tips">至少选择一个</div>
+        <div class="p2-total-num"><span class="p2-total"></span><span class="p2-symbol"></span></div>
+        <div class="p2-now-num"></div>
+      </div>
+      <ul class="p2-calculator-box clearfix">
+        <li class="p2-calculator-number" data-txt="9000" data-id="1"><a href="javascript:;">7*24</a></li>
+        <li class="p2-calculator-number" data-txt="1000" data-id="2"><a href="javascript:;">颈椎病</a></li>
+        <li class="p2-calculator-number" data-txt="2000" data-id="3"><a href="javascript:;">地中海</a></li>
+        <li class="p2-calculator-symbol" data-txt="-1"><a href="javascript:;">AC</a></li>
+        <li class="p2-calculator-number" data-txt="3000" data-id="4"><a href="javascript:;">熊猫眼</a></li>
+        <li class="p2-calculator-number" data-txt="4000" data-id="5"><a href="javascript:;">过劳肥</a></li>
+        <li class="p2-calculator-number" data-txt="5000" data-id="6"><a href="javascript:;">三更 加班</a></li>
+        <li class="p2-calculator-symbol" data-txt="+"><a href="javascript:;">+</a></li>
+        <li class="p2-calculator-number" data-txt="6000" data-id="7"><a href="javascript:;">三餐 盒饭</a></li>
+        <li class="p2-calculator-number" data-txt="7000" data-id="8"><a href="javascript:;">bug 无法 复现</a></li>
+        <li class="p2-calculator-number" data-txt="8000" data-id="9"><a href="javascript:;">单身狗 没男友</a></li>
+        <li class="p2-calculator-symbol" data-txt="="><a href="javascript:;">=</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 第3页 -->
+  <div class="page p3 ">
+    <div class="content">
+      <div class="p3-paper-head"></div>
+      <div class="p3-paper-box">
+        <div class="p3-paper-animate"></div>
+        <img src="img/p3_img.png" class="p3-paper-img">
+      </div>
+      <div class="p3-tips">长按可保存</div>
+      <div class="p3-btn-box clearfix">
+        <div class="p3-btn p3-btn-reset fl"></div>
+        <div class="p3-btn p3-btn-share fr"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog d-share">
+    <img src="img/sharehint.png" alt="" class="d-share-hint">
+  </div>
+  <div class="dialog d-loading">
+    <div class="loading-div ab-c"></div>
+  </div>
+  <div class="dialog d-tips">
+    <div class="content">
+      <div class="d-tips-txt"><span>错误提示错误提示错误提示</span></div>
+    </div>
+  </div>
+
+  <div style="display: none">loading......请输入昵称只能输入中文英文数字昵称长度范围为2~3字7*24
+    改改改
+    过劳肥
+    葛优瘫
+    游泳圈
+    三更加班
+    万能打杂
+    热点恐慌
+    单声狗没男友
+    早班机
+    航班滞留
+    空头假期
+    一直电话
+    日行500公里
+    七彩黑
+    强迫症
+    熊猫眼
+    背锅侠
+    黑白颠倒
+    鸭梨山大
+    单身狗
+    颈椎病
+    手机依赖
+    三餐盒饭
+    钱少事多
+    被催婚
+    啤酒枸杞
+    千杯不倒
+    神经衰弱
+    学不完的指示
+    焦虑
+    啤酒肚
+    7*24*365
+    单身狗没女友
+    bug无法复现
+    万金油
+    开不完的会
+    网络异常，请稍后再试
+  </div>
+
+<script>
+  var app = window.app || {
+    currentPage: 0,
+    root: '',
+    pages: {},
+    dialogs: {},
+    audios: {},
+    common: {},
+    isMultiLoad: true, //是否分步加载
+    link:''
+  };
+</script>
+<!-- <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script> -->
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+<script src="//cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!-- build:js js/lib.js -->
+<!-- lib目录下的js文件写在这里 -->
+<!-- endbuild -->
+<!-- build:js js/main.js -->
+<script src="js/loader.js"></script>
+<script src="js/ip.audios.js"></script>
+<script src="js/ip.bgm.js"></script>
+<script src="js/app.js"></script>
+<script src="js/common.js"></script>
+<script src="js/p1.js"></script>
+<script src="js/p2.js"></script>
+<script src="js/p3.js"></script>
+<script src="js/dialog.js"></script>
+<script src="js/index.js"></script>
+<script src="js/wxshare.js"></script>
+<script src="js/landscape.js"></script>
+<script src="js/scroll.js"></script>
+<!-- endbuild -->
+<script type="text/javascript">
+
+  (function () {
+    console.log(window.location);
+    app.link = window.location.href;
+    console.log(app.link + 'img/share.jpg');
+    window.wxshare.config({
+      title: '我是微信分享标题(待修改)',
+      desc: '我是微信分享描述...(待修改)',
+      link: app.link,
+      imgUrl: app.link + 'img/share.jpg'
+    });
+  }());
+
+</script>
+</body>
+
+</html>

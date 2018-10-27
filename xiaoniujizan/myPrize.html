@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>小牛</title>
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+  <!-- build:css css/main.css -->
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <link href="css/lib/mui.min.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/lib/mui.min.css"/>
+  <!-- endbuild -->
+</head>
+
+<body>
+<!-- 如果是在微信里运行，在页面的最上方放一张隐藏的图片，作为默认的分享图片 -->
+<div style="display:none;">
+  <img src="img/share.jpg">
+</div>
+
+<!--我的奖品页-->
+<div class="p4">
+  <div class="content ">
+    <!--顶部banner图-->
+    <div class="p4-tit">
+      <div class="p4-tit-img-box">
+        <img src="img/header-bg.jpg" class="p4-tit-img">
+      </div>
+      <div class="p1-header-font">
+        <span class="p1-header-font-btn btn-activity-rules">活动规则</span>
+        <span class="p1-header-font-btn btn-my-prize go-myPrize">我的奖品</span>
+      </div>
+      <span class="p4-tit-txt">我的奖品</span>
+    </div>
+    <!--我的奖品详单-->
+    <div class="p4-content">
+      <div class="p4-content-border p4-content-border-up">
+        <img src="img/border-up.png">
+      </div>
+      <!--有商品-->
+      <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-media">
+          <div class="mui-view-img-box mui-pull-left">
+            <img src="img/tu.png" />
+          </div>
+          <div class="mui-media-body">
+            <div class="p4-media-body-title-box clearfix">
+              <div class="p4-media-body-title">猫券</div>
+              <div class="p4-media-body-btn btn-prizesIntroduction">奖品介绍</div>
+            </div>
+            <div class="p4-media-body-middle">
+              <span>优惠码：</span>
+              <input type="text" class="p4-media-input" placeholder="" readonly value="QQW5556NF">
+              <span class="p4-media-btn click-copy">复制</span>
+            </div>
+            <!--<div class="p4-media-body-foot">-->
+              <!--<span>截止时间：</span><span>2017年11月20日</span>-->
+            <!--</div>-->
+          </div>
+          <!--<span class="p4-media-prompt">请到天猫使用优惠券</span>-->
+        </li>
+        <!--<li class="mui-table-view-cell mui-media">-->
+          <!--<div class="mui-view-img-box mui-pull-left">-->
+            <!--<img src="img/tu.png" />-->
+          <!--</div>-->
+          <!--<div class="mui-media-body">-->
+            <!--<div class="p4-media-body-title-box clearfix">-->
+              <!--<div class="p4-media-body-title">电动车</div>-->
+              <!--<div class="p4-media-body-btn btn-prizesIntroduction">奖品介绍</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="p4-media-body-middle">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>收货地址：</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" class="p4-media-input" placeholder="请填写地址" value="{$prize.address}">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="p4-media-body-foot">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>截止时间：</span><span>2017年11月20日</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<span class="p4-media-prompt">请等待奖品确认，客服会在1个工作日内与您联系</span>&ndash;&gt;-->
+        <!--</li>-->
+        <!--<li class="mui-table-view-cell mui-media">-->
+          <!--<div class="mui-view-img-box mui-pull-left">-->
+            <!--<img src="img/tu.png" />-->
+          <!--</div>-->
+          <!--<div class="mui-media-body">-->
+            <!--<div class="p4-media-body-title-box clearfix">-->
+              <!--<div class="p4-media-body-title">电动车</div>-->
+              <!--<div class="p4-media-body-btn btn-prizesIntroduction">奖品介绍</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="p4-media-body-middle">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>收货地址：</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" class="p4-media-input" placeholder="请填写地址" value="{$prize.address}">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="p4-media-body-foot">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>截止时间：</span><span>2017年11月20日</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<span class="p4-media-prompt">请等待奖品确认，客服会在1个工作日内与您联系</span>&ndash;&gt;-->
+        <!--</li>-->
+        <!--<li class="mui-table-view-cell mui-media">-->
+          <!--<div class="mui-view-img-box mui-pull-left">-->
+            <!--<img src="img/tu.png" />-->
+          <!--</div>-->
+          <!--<div class="mui-media-body">-->
+            <!--<div class="p4-media-body-title-box clearfix">-->
+              <!--<div class="p4-media-body-title">电动车</div>-->
+              <!--<div class="p4-media-body-btn btn-prizesIntroduction">奖品介绍</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="p4-media-body-middle">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>收货地址：</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" class="p4-media-input" placeholder="请填写地址" value="{$prize.address}">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="p4-media-body-foot">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>截止时间：</span><span>2017年11月20日</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<span class="p4-media-prompt">请等待奖品确认，客服会在1个工作日内与您联系</span>&ndash;&gt;-->
+        <!--</li>-->
+        <!--<li class="mui-table-view-cell mui-media">-->
+          <!--<div class="mui-view-img-box mui-pull-left">-->
+            <!--<img src="img/tu.png" />-->
+          <!--</div>-->
+          <!--<div class="mui-media-body">-->
+            <!--<div class="p4-media-body-title-box clearfix">-->
+              <!--<div class="p4-media-body-title">电动车</div>-->
+              <!--<div class="p4-media-body-btn btn-prizesIntroduction">奖品介绍</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="p4-media-body-middle">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>收货地址：</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" class="p4-media-input" placeholder="请填写地址" value="{$prize.address}">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="p4-media-body-foot">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span>截止时间：</span><span>2017年11月20日</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<span class="p4-media-prompt">请等待奖品确认，客服会在1个工作日内与您联系</span>&ndash;&gt;-->
+        <!--</li>-->
+        <!--提示消息-->
+        <!--<div class="p4-tips">领取实物奖品请填写收货地址</div>-->
+      </ul>
+      <!--无商品-->
+      <div class="p4-no-prize hide">
+        <div class="no-prize-img-box">
+          <img src="img/no-prize.png" alt="">
+        </div>
+        <div class="no-prize-txt">
+          <span>您还没有获得任何奖品</span><br>
+          <span>快去参加活动吧！</span>
+        </div>
+      </div>
+      <div class="p4-content-border p4-content-border-down">
+        <img src="img/border-down.png">
+      </div>
+    </div>
+    <!--底部按钮-->
+    <div class="p4-footer-box">
+      <!--返回首页 完善信息按钮-->
+      <div class="p4-footer">
+        <span class="p4-btn go-index">返回首页</span>
+        <span class="p4-btn margin-left go-person">完善信息</span>
+      </div>
+      <!--免责声明-->
+      <div class="statement-footer">
+        免责声明：最终解释权归<span class="statement-name">北京小牛公众号</span>所有
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--活动规则-->
+<div class="dialog d-rule">
+  <div class="d-rule-box">
+    <div class="d-rule-title">活动规则</div>
+    <div class="d-rule-content  d-touchmove">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <ul class="d-content-indent iscroll-box">
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+      </ul>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-rule-btn">关 闭</div>
+  </div>
+</div>
+<!--奖品介绍-->
+<div class="dialog d-prizesIntroduction">
+  <div class="d-prizesIntroduction-box">
+    <div class="d-prizesIntroduction-title">奖品介绍</div>
+    <div class="d-prizesIntroduction-content  d-touchmove">
+      <div class="d-prizesIntroduction-content-indent iscroll-box">
+        奖品介绍奖品介绍奖品介绍奖品介绍
+        奖品介绍奖品介绍奖品介绍奖品介绍
+        奖品介绍奖品介绍奖品介绍奖品介绍
+        奖品介绍奖品介绍奖品介绍奖品介绍
+        奖品介绍奖品介绍奖品介绍奖品介绍
+      </div>
+    </div>
+    <div class="d-prizesIntroduction-btn">关 闭</div>
+  </div>
+</div>
+<!--提示消息-->
+<div class="tip-box">
+  <div class="tip-infor"></div>
+</div>
+<script>
+  var app = window.app || {
+
+  };
+</script>
+
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/clipboard.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/lib/mui.min.js"></script>
+<script src="js/myPrize.js"></script>
+<script src="js/publicJs.js"></script>
+<script src='js/wxshare.js'></script>
+<script src='js/iscroll.js'></script>
+<script src='js/landscape.js'></script>
+
+
+</body>
+<script type="text/javascript">
+//  (function () {
+//    function getLink() {
+//      if (window.location.host.indexOf('dev.benbun.com') >= 0) {
+//        return 'http://dev.benbun.com/web/zhilifang/xiongmaohuijia/';
+//      } else {
+//        return 'http://w.benbun.com/zhilifang/xiongmaohuijia/';
+//      }
+//    }
+//
+//    app.link = getLink();
+//
+//    window.wxshare.config({
+//      title: '我是微信分享标题(待修改)',
+//      desc: '我是微信分享描述...(待修改)',
+//      link: app.link,
+//      imgUrl: app.link + 'img/share.jpg'
+//    });
+//  }());
+</script>
+</html>

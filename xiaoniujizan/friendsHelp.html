@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>小牛</title>
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+  <!-- build:css css/main.css -->
+  <link href="css/lib/bootstrap.css" rel="stylesheet" />
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <link href="css/lib/mui.min.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/lib/mui.min.css"/>
+  <!-- endbuild -->
+</head>
+
+<body>
+<!-- 好友助力充电页 -->
+<div class="p2 ">
+  <div class="content ">
+    <!--顶部banner图-->
+    <header class="p2-header">
+      <div class="p2-header-img-box">
+        <img src="img/header-bg.jpg" class="p2-header-img">
+      </div>
+      <div class="p2-header-font">
+        <span class="p2-header-font-btn btn-activity-rules">活动规则</span>
+        <span class="p2-header-font-btn btn-my-prize go-myPrize">我的奖品</span>
+      </div>
+    </header>
+    <!--倒计时-->
+    <div class="p2-header-time">
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-day1">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-day2">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <span class="p2-header-time-text">天</span>
+
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-hour1">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-hour2">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <span class="p2-header-time-text">时</span>
+
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-minute1">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <div class="p2-timefont-box">
+        <span class="p2-header-timefont time-minute2">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <span class="p2-header-time-text">分</span>
+
+      <div class="p2-timefont-box">
+        <span class="time-second1 p2-header-timefont">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <div class="p2-timefont-box">
+        <span class="time-second2 p2-header-timefont">0</span>
+        <span class="p2-header-timefont-bg">8</span>
+      </div>
+      <span class="p2-header-time-text">秒</span>
+    </div>
+    <!--进度条-电池-->
+    <div class="p2-battery-progress-box">
+      <div class="mui-progressbar-box">
+        <div id="p2Progress" class="mui-progressbar" data-progress="10">
+          <span></span>
+        </div>
+      </div>
+      <div class="p2-battery-txt">
+        <div class="p2-battery-box">
+          <span class="p2-pregress pregress1"></span>
+          <span class="p2-pregress-bg">8</span>
+        </div>
+        <div class="p2-battery-box">
+          <span class="p2-pregress pregress2">6</span>
+          <span class="p2-pregress-bg">8</span>
+        </div>
+        <div class="p2-battery-box">
+          <span class="p2-pregress pregress3">1</span>
+          <span class="p2-pregress-bg">8</span>
+        </div>
+        <div class="p2-battery-box">
+          <span class="p2-sign">%</span>
+        </div>
+      </div>
+    </div>
+    <!--帮TA充电按钮-->
+    <div class="p2-btn">
+      <div class="btn-red btn-activity-helpSucc">帮TA充电</div>
+      <div class="btn-red btn-gray hide">已助力</div>
+    </div>
+    <!--参加活动按钮-->
+    <div class="p2-btn">
+      <div class="btn-red go-index">参加活动</div>
+    </div>
+    <!--好友帮忙充电详情-->
+    <div class="p2-friends-help">
+      <ul class="p2-friends-help-txt">
+        <li>好友<span class="friends-name">大一</span>帮TA充电<span class="friends-electricity">10</span>%</li>
+        <li>好友<span class="friends-name">龙二</span>帮TA充电<span class="friends-electricity">20</span>%</li>
+        <li>好友<span class="friends-name">张三</span>帮TA充电<span class="friends-electricity">30</span>%</li>
+        <!--<li>好友<span class="friends-name">李四</span>帮TA充电<span class="friends-electricity">40</span>%</li>-->
+        <!--<li>好友<span class="friends-name">王五</span>帮TA充电<span class="friends-electricity">50</span>%</li>-->
+        <!--<li>好友<span class="friends-name">刘小六</span>帮TA充电<span class="friends-electricity">60</span>%</li>-->
+        <!--<li>好友<span class="friends-name">赵七</span>帮TA充电<span class="friends-electricity">70</span>%</li>-->
+      </ul>
+    </div>
+    <!--免责声明-->
+    <div class="statement-footer">
+      免责声明：最终解释权归<span class="statement-name">北京小牛公众号</span>所有
+    </div>
+  </div>
+</div>
+
+<div class="dialog d-loading">
+  <div class="loading-div ab-c"></div>
+</div>
+
+<!--活动规则-->
+<div class="dialog d-rule">
+  <div class="d-rule-box">
+    <div class="d-rule-title">活动规则</div>
+    <div class="d-rule-content  d-touchmove">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <ul class="d-content-indent iscroll-box">
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+      </ul>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-rule-btn">关 闭</div>
+  </div>
+</div>
+<!--活动结束-->
+<div class="dialog d-over">
+  <div class="d-over-box">
+    <div class="d-over-title">很遗憾</div>
+    <div class="d-over-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-over-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-over-main clearfix">
+        <div class="d-over-txt">
+          <span>活动已结束</span><br>
+          <span>请关注公众号</span>
+          <br><span>参加更多活动</span>
+        </div>
+        <div class="d-over-code">
+          <img src="img/code.png" alt="">
+        </div>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!--帮充电成功-->
+<div class="dialog d-helpSucc" >
+  <div class="d-helpSucc-box">
+    <div class="d-helpSucc-title">恭喜你</div>
+    <div class="d-helpSucc-img-box">
+      <img src="img/win.png">
+    </div>
+    <div class="d-helpSucc-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-helpSucc-txt">
+        <span>充电成功</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-helpSucc-btn">确定</div>
+  </div>
+</div>
+<!--不可重复帮充电-->
+<div class="dialog d-helpError" >
+  <div class="d-helpError-box">
+    <div class="d-helpError-title">已助力</div>
+    <div class="d-helpError-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-helpError-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-helpError-txt">
+        <span>一次就好，不可贪心哦！</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-helpError-btn">确定</div>
+  </div>
+</div>
+<!--人数达到上线-->
+<div class="dialog d-maxPeople" >
+  <div class="d-maxPeople-box">
+    <div class="d-maxPeople-title">人数已满</div>
+    <div class="d-maxPeople-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-maxPeople-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-maxPeople-txt">
+        <span>帮好友充电人数已达上线！</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-maxPeople-btn">确定</div>
+  </div>
+</div>
+
+<!--提示消息-->
+<div class="tip-box">
+  <div class="tip-infor"></div>
+</div>
+<script>
+  var app = window.app || {
+    endTime: '2017-11-11 22:00:00',
+    startTime: '2017-10-01 22:00:00',
+    prizeSet:'0',//0表示可以充电   1表示已经充过电了
+    allowPerson:'0',//0表示还有没达到上限  1表示已经达到上限不能充电
+  };
+</script>
+
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/lib/mui.min.js"></script>
+<script src="js/friendsHelp.js"></script>
+<script src="js/publicJs.js"></script>
+<script src='js/wxshare.js'></script>
+<script src='js/iscroll.js'></script>
+<script src='js/landscape.js'></script>
+
+
+</body>
+<script type="text/javascript">
+  (function () {
+
+    function getLink() {
+      if (window.location.host.indexOf('dev.benbun.com') >= 0) {
+        return 'http://dev.benbun.com/web/zhilifang/xiongmaohuijia/';
+      } else {
+        return 'http://w.benbun.com/zhilifang/xiongmaohuijia/?pid=asd&ads=asd';
+      }
+    }
+
+    app.link = getLink();
+
+    window.wxshare.config({
+//      title: '我是微信分享标题(待修改)',
+//      desc: '我是微信分享描述...(待修改)',
+//      link: app.link+'&id='+id,
+//      imgUrl: app.link + 'img/share.jpg'
+    });
+  }());
+</script>
+<script>
+  $(function () {
+    // 获取手指在轮播图元素上的一个滑动方向（左右）
+
+    // 获取界面上轮播图容器
+    var $carousels = $('.carousel');
+    var startX,endX;
+    // 在滑动的一定范围内，才切换图片
+    var offset = 50;
+    // 注册滑动事件
+    $carousels.on('touchstart',function (e) {
+      // 手指触摸开始时记录一下手指所在的坐标x
+      startX = e.originalEvent.touches[0].clientX;
+
+    });
+    $carousels.on('touchmove',function (e) {
+      // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+      endX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchend',function (e) {
+      //console.log(endX);
+      //结束触摸一瞬间记录手指最后所在坐标x的位置 endX
+      //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
+      var distance = Math.abs(startX - endX);
+      if (distance > offset){
+        //说明有方向的变化
+        //根据获得的方向 判断是上一张还是下一张出现
+        $(this).carousel(startX >endX ? 'next':'prev');
+      }
+    })
+  });
+</script>
+</html>

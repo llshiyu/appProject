@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>小牛</title>
+  <!--
+  <script>
+  var startloadingTime = new Date().getTime();
+  console.log('startloadingTime',startloadingTime);
+  </script>
+  -->
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+  <!-- build:css css/main.css -->
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <link href="css/lib/mui.min.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css?v=1" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/lib/mui.min.css"/>
+  <!-- endbuild -->
+  <script>
+    // 统计代码
+    // var _hmt = _hmt || [];
+    // (function() {
+    //   var hm = document.createElement("script");
+    //   hm.src = "//hm.baidu.com/hm.js?ac516bba9baf1a873f294b0181beb1c8";
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(hm, s);
+    // })();
+  </script>
+</head>
+
+<body>
+<!-- 如果是在微信里运行，在页面的最上方放一张隐藏的图片，作为默认的分享图片 -->
+<div style="display:none;">
+  <img src="img/share.jpg">
+</div>
+<!--选择购买门店-->
+<div class="p6 iscroll-box">
+  <div class="content ">
+    <!--<div class="mui-content">-->
+    <div class="p6-content">
+      <div class="p6-tit">
+        <div class="p6-tit-img-box">
+          <img src="img/header-bg.jpg" class="p6-tit-img">
+        </div>
+        <!--<img src="img/go-back.png" class="p6-header-back">-->
+        <span class="p6-tit-txt">选择购买门店</span>
+      </div>
+      <div class="mui-content address-list">
+        <ul class="p6-content-list">
+          <li class="p6-active" data-lat="{$areaArray.lat}" data-lng="{$areaArray.lng}" data-id="{$areaArray.id}">
+            <span class="p6-list-tit span-block">朝阳分店</span>
+            <span class="span-block p6-list-txt">
+              <span class="p6-list-left">营业时间：</span>
+              <span class="p6-list-right">9:00 - 17:00</span>
+              </span>
+            <span class="span-block p6-list-txt">
+              <span class="p6-list-left">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+              <span class="p6-list-right p6-list-right-address text-decoration"> 北京朝阳<img
+                      class="p6-list-siteimg" src="img/map-site.jpg"></span>
+              </span>
+            <span class="span-block p6-list-txt">
+              <span class="p6-list-left">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+              <span class="p6-list-right"> 15100000000</span>
+              </span>
+            <!--<span class="span-block p6-list-route">查看路线导航 &gt;</span>-->
+          </li>
+            <li data-lat="{$area.lat}" data-lng="{$area.lng}" data-id="{$area.id}">
+              <span class="p6-list-tit span-block">海淀分店</span>
+              <span class="span-block p6-list-txt">
+              <span class="p6-list-left">营业时间：</span>
+              <span class="p6-list-right">9:00 - 17:00</span>
+              </span>
+              <span class="span-block p6-list-txt">
+              <span class="p6-list-left">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+              <span class="p6-list-right p6-list-right-address text-decoration"> 北京海淀<img
+                      class="p6-list-siteimg" src="img/map-site.jpg"></span>
+              </span>
+              <span class="span-block p6-list-txt">
+              <span class="p6-list-left">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+              <span class="p6-list-right"> 13100000000</span>
+              </span>
+              <!--<span class="span-block p6-list-route">查看路线导航 &gt;</span>-->
+            </li>
+        </ul>
+      </div>
+
+    </div>
+    <!--</div>-->
+    <!--<div class="statement-footer">-->
+    <!--本活动最总解释权，由 <span class="statement-name">{$name}</span> 所有-->
+    <!--</div>-->
+  </div>
+  <div class="p6-footer confirm-buy">
+    <span class="p6-btn ">确认提交</span>
+  </div>
+</div>
+<!--到店购买 弹窗（d-confirmBuy）-->
+<div class="dialog d-confirmBuy">
+  <div class="d-confirmBuy-box">
+    <div class="d-confirmBuy-content">为保护你的优惠利益，请到店由店员点击确定认购按钮。否则优惠额度即视为无效！</div>
+    <div class="d-confirmBuy-btns">
+      <div class="d-confirmBuy-btn2">取 消</div>
+      <div class="d-confirmBuy-btn1">已到店</div>
+    </div>
+  </div>
+</div>
+<!--确认认购 弹窗（d-shopBuy）-->
+<div class="dialog d-shopBuy">
+  <div class="d-shopBuy-box">
+    <div class="d-shopBuy-content">点击确定认购即代表已完成购买，砍价将失效。</div>
+    <div class="d-shopBuy-btns">
+      <div class="d-shopBuy-btn2">取 消</div>
+      <div class="d-shopBuy-btn1 buy-shop">确定认购</div>
+
+    </div>
+  </div>
+</div>
+<script>
+  var app = window.app || {
+    index: "{:U('Home/Kanjia/index')}",
+    addressIDUrl: "{:U('Home/Kanjia/addressId')}",
+    detail: "{:U('Home/Kanjia/detail')}",
+    buyUrl: "{:U('Home/Kanjia/isbuy')}"
+  };
+</script>
+<script src="js/lib/jquery.js"></script>
+
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/lib/mui.min.js"></script>
+<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src='js/iscroll.js'></script>
+
+<script src="js/publicJs.js"></script>
+<script src="js/buyAddress.js?v=1"></script>
+<script src='js/wxshare.js'></script>
+</body>
+<!-- <script type="text/javascript">
+$(function() {
+  var me = this;
+  if (me.success) return;
+  if (me.running) return;
+  me.running = true;
+  var url = location.href.split('#')[0];
+  url = encodeURIComponent(url);
+
+
+
+
+  $.ajax({
+    url: '//api.benbun.com/wechat/jssign/',
+    data: {
+      url: url
+    },
+    dataType: 'jsonp',
+    success: function(rsp) {
+      // console.log('rsp', rsp);
+      if (rsp.code != 0) {
+        return;
+      }
+      if (!window.wx) return;
+      var wx = window.wx;
+      var debug = (window.location.search.indexOf('__wxdebug__=1') !== -1);
+      var data = rsp.data;
+      wx.config({
+        debug: debug,
+        appId: data.appId,
+        timestamp: data.timestamp,
+        nonceStr: data.nonceStr,
+        signature: data.signature,
+        jsApiList: [
+          'openLocation',
+        ]
+      });
+
+      me.success = true;
+    },
+    complete: function() {
+      me.running = false;
+    }
+  });
+
+
+
+  $('.p6-content-list').on('click', '.p6-list-route', function(e) {
+    var latWx = $(this).parents('li').data('lat') * 1-0.00552;
+    var lngWx = $(this).parents('li').data('lng') * 1-0.0061;
+    var nameWx = $(this).parents('li').find('.p6-list-tit').text();
+    var addressWx = $(this).parents('li').find('.p6-list-address').text();
+
+    // console.log('latWx=' + latWx + 'lngWx=' + lngWx + 'nameWx=' + nameWx + 'addressWx=' + addressWx);
+
+
+
+
+
+    wx.ready(function() {
+
+      wx.openLocation({
+        latitude: latWx,
+        longitude: lngWx,
+        name: nameWx,
+        address: addressWx,
+        scale: 28,
+        infoUrl: 'http://weixin.qq.com' // 在查看位置界面底部显示的超链接,可点击跳转
+      });
+      // wx.openLocation({
+      //   latitude: 27.9478400000,
+      //   longitude: 109.6042100000,
+      //   name: '崇德堂',
+      //   address: '',
+      //   scale: 28,
+      //   infoUrl: 'http://weixin.qq.com' // 在查看位置界面底部显示的超链接,可点击跳转
+      // });
+    });
+
+    
+    e.preventDefault();
+  });
+})
+</script> -->
+<script type="text/javascript">
+//  (function () {
+//    app.activity_id = getUrlParam('activity_id');
+//
+//    function getLink() {
+//      if (window.location.host.indexOf('dev.benbun.com') >= 0) {
+//        return 'http://dev.benbun.com/web/niu/liuliangguanjia/home/kanjia/index?activity_id=' + app.activity_id;
+//      } else {
+//        return 'http://w.benbun.com/niu/liuliangguanjia/home/kanjia/index?activity_id=' + app.activity_id;
+//      }
+//    }
+//
+//    app.link = getLink();
+////    app.link = window.location.href;
+//
+//
+//    window.wxshare.config({
+//      title: '{$activity.share_appmsg_title}',
+//      friendDesc: '{$activity.share_appmsg_desc}',
+//      timelineText: '{$activity.share_timeline_desc}',
+//      link: app.link,
+//      imgUrl: window.location.origin + '__PUBLIC__/Uploads/{$activity.share_thumbnail}'
+//    });
+//  }());
+</script>
+
+</html>

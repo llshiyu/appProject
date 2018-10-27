@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>全宇宙独一无二的祝福</title>
+  <!-- build:js js/fontbase.js?v=8 -->
+  <script src="public/static/js/fontbase.js?v=8"></script>
+  <!-- endbuild -->
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:css css/main.css?v=8 -->
+  <link href="public/static/css/swiper.min.css?v=8" rel="stylesheet">
+  <link href="public/static/css/common.css?v=8" rel="stylesheet"/>
+  <link href="public/static/css/anim.css?v=8" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="public/static/css/index.css?v=8" rel="stylesheet"/>
+  <link href="public/static/css/cssloader.css?v=8" rel="stylesheet"/>
+  <!-- endbuild -->
+</head>
+
+<body>
+<!-- 如果是在微信里运行，在页面的最上方放一张隐藏的图片，作为默认的分享图片 -->
+<div style="display:none;">
+  <img src="public/static/img/share.jpg?v=8">
+</div>
+<!-- loading -->
+<div class="page p0">
+  <div class="content">
+    <img class="p0-img-disk" src="public/static/img/loading_disk.png?v=8" alt="">
+    <div class="p0-img-disk-rotate-box">
+      <img class="p0-img-disk-rotate" src="public/static/img/loading_disk_rotate.png?v=8" alt="">
+    </div>
+    <img class="p0-img-disk-pointer" src="public/static/img/disk_pointer.png?v=8" alt="">
+    <img class="p0-img-disk-light" src="public/static/img/loading_light.png?v=8" alt="">
+  </div>
+</div>
+<!-- p1 开场动画页 -->
+<div class="page p1">
+  <div class="p1-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+  <div class="content">
+    <img class="p1-content-img" data-src="public/static/img/p1_content_img.png?v=8" alt="">
+    <img class="p1-content-text" data-src="public/static/img/p1_content_text.png?v=8" alt="">
+    <div class="p1-btn btn-next"></div>
+  </div>
+</div>
+<!-- p2 上传照片页 -->
+<div class="page p2">
+  <div class="content">
+    <div class="p2-input-box">
+      <input type="text" maxlength="6" name="username" class="p2-input">
+    </div>
+    <div class="p2-photo-box-box p2-upload-btn">
+      <div class="p2-photo-box "></div>
+      <div class="p2-photo-succ hide"></div>
+    </div>
+    <div class="p2-btn p2-ok-btn"></div>
+    <input type="file" style="display: none;" name="p2_img_file" class="p2-img-input" accept="image/*" multiple>
+  </div>
+</div>
+<!-- p3 选择封皮 -->
+
+<!-- p3 选择封皮 -->
+<div class="page p3">
+  <div class="content">
+    <!-- Swiper -->
+    <div class="swiper-container p3-swiper">
+      <div class="swiper-wrapper p3-wrapper">
+        <div data-id="1" class="swiper-slide">
+          <div class="slick-img-box">
+            <img class="slick-img slick-img1">
+          </div>
+        </div>
+        <div data-id="2" class="swiper-slide">
+          <div class="slick-img-box">
+            <img class="slick-img slick-img2">
+          </div>
+        </div>
+        <div data-id="3" class="swiper-slide">
+          <div class="slick-img-box">
+            <img class="slick-img slick-img3">
+
+          </div>
+        </div>
+        <div data-id="4" class="swiper-slide">
+          <div class="slick-img-box">
+            <img class="slick-img slick-img4">
+
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next p3-swiper-next-btn p3-swiper-btn"></div>
+      <div class="swiper-button-prev p3-swiper-prev-btn p3-swiper-btn"></div>
+    </div>
+    <div class="p3-btn-box">
+      <button class="btn-prev p3-margin-right2"></button>
+      <button class="p3-btn-next"></button>
+    </div>
+  </div>
+</div>
+<!-- p4 选择（编辑）祝福语 -->
+<div class="page p4  ">
+  <div class="content">
+    <div class="p4-username p4-name-top"><span>张三</span> :</div>
+    <!-- Swiper -->
+    <div class="swiper-container p4-swiper p4-txt-box-bg">
+      <div class="swiper-wrapper p4-wrapper">
+        <div data-id="1" class="swiper-slide">
+          <textarea class="slick-txt-box" rows="4" maxlength="75">时光是个贼，偷走了青春，偷不走我们的友谊。</textarea>
+          <!--<div class="slick-txt-box">时光是个贼，偷走了青春，偷不走我们的友谊。</div>-->
+        </div>
+        <div data-id="2" class="swiper-slide">
+          <textarea class="slick-txt-box" rows="4" maxlength="75">A cheery Christmas hold lots of happiness for you! 给你特别的祝福，愿圣诞带给你无边的幸福。</textarea>
+          <!--<div class="slick-txt-box">A cheery Christmas hold lotsof happiness for you!给你特别的祝福，愿圣诞带给你无边的幸福。</div>-->
+        </div>
+        <div data-id="3" class="swiper-slide">
+          <textarea class="slick-txt-box" rows="4" maxlength="75">圣诞不重要，重要的是，我想你了。</textarea>
+          <!--<div class="slick-txt-box">圣诞不重要，重要的是，我想你了。</div>-->
+        </div>
+        <div data-id="4" class="swiper-slide">
+          <textarea class="slick-txt-box" rows="4" maxlength="75">这个冬天，只要一想到你，心里就暖洋洋的。</textarea>
+          <!--<div class="slick-txt-box">这个冬天，只要一想到你，心里就暖洋洋的。</div>-->
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next p4-swiper-next-btn p4-swiper-btn"></div>
+      <div class="swiper-button-prev p4-swiper-prev-btn p4-swiper-btn"></div>
+    </div>
+    <div class="p4-textarea-box p4-txt-box-bg">
+      <textarea name="p4_blessings" rows="4" class="p4-textarea" maxlength="75"></textarea>
+    </div>
+    <input class="p4-username p4-name-bottom" maxlength="8" type="text" name="sendMailName" value="李四">
+    <div class="p4-btn-mail-box p4-btn-mail-btn-own"></div>
+    <!-- <h1 class="p4-username p4-name-bottom">李四</h1> -->
+    <div class="p4-btn-box">
+      <button class="btn-prev p4-margin-right2"></button>
+      <button class="p4-btn-next"></button>
+    </div>
+    <!-- <div class="p4-btn-box">
+      <button class="btn-prev p4-btn"></button>
+      <button class="p4-btn p4-btn-next"></button>
+    </div> -->
+  </div>
+</div>
+<!-- p5 贺卡展示 -->
+<div class="page p5  ">
+  <div class="p1-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+  <div class="content">
+    <!--背景上的丝带-->
+    <div class="p5-content1"></div>
+    <!--贺卡封皮-->
+    <div class="p5-card-cover">
+      <img class="p5-cover-sprite sprite"></img>
+    </div>
+
+    <div class="p5-3d-box">
+      <!--信封底面-->
+      <div class="p5-envelope2 p5-envelope-in">
+        <div class="p5-envelope2-img-box p5-envelope20">
+          <img data-src="public/static/img/p5_envelope20.png?v=8" alt="">
+        </div>
+        <div class="p5-envelope2-img-box p5-envelope21">
+          <img data-src="public/static/img/p5_envelope21.png?v=8" alt="">
+        </div>
+      </div>
+      <!--信封盖-->
+      <div class="p5-envelope3"></div>
+      <!--贺卡-->
+      <div class="p5-card-box">
+        <div class="p5-card">
+          <!--<div class="p5-card-img-box">-->
+            <!--<img data-src="public/static/img/p5_cont_1.png?v=8" alt="">-->
+          <!--</div>-->
+          <div class="p5-card-friend-name p5-card-font"><span>张三</span> : </div>
+          <div class="p5-card-cont p5-card-font">A cheery Christmas hold lotsof happiness for you!给你特别的祝福，愿圣诞带给你无边的幸福。</div>
+          <div class="p5-card-my-name p5-card-font">李四</div>
+        </div>
+      </div>
+      <!--信封上面-->
+      <div class="p5-envelope1 p5-envelope-in"></div>
+      <!--信封盖-->
+      <div class="p5-envelope3"></div>
+    </div>
+    <!--按钮-->
+    <div class="p5-btn-box ">
+      <!--<div class="p5-btn-top btn-prev"></div>-->
+      <div class="p5-btn-bottom clearfix">
+        <div class="p5-btn-friend fl"></div>
+        <div class="p5-btn-prev btn-prev fl"></div>
+        <div class="p5-btn-friend-circle fl"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- p6 分享 -->
+<div class="page p6  ">
+  <ul id="p6-scene" class="ab-f">
+    <li class="p6-layer ab-f" data-depth="1.00">
+      <img class="ab-f" data-src="public/static/img/p6bg.jpg?v=8">
+      <img class="ab-f" data-src="public/static/img/p6light1.png?v=8">
+      <img class="ab-f" data-src="public/static/img/p6light2.png?v=8">
+      <div class="p6-btn1 btn-circle" data-id="1"><b></b><i></i></div>
+      <div class="p6-btn2 btn-circle" data-id="2"><b></b><i></i></div>
+      <div class="p6-btn3 btn-circle" data-id="3"><b></b><i></i></div>
+      <div class="p6-btn4 btn-circle" data-id="4"><b></b><i></i></div>
+    </li>
+  </ul>
+  <div class="ab-f dialog p6-hint">
+    <div class="content">
+      <img class="ab-f" data-src="public/static/img/p6-hint.png?v=8">
+    </div>
+  </div>
+  <div class="ab-f dialog p6-dialog1">
+    <div class="content">
+      <img class="ab-f" data-src="public/static/img/p6d1.png?v=8">
+    </div>
+  </div>
+  <!-- <div class="ab-f dialog p6-dialog2"></div> -->
+  <div class="ab-f dialog p6-dialog3">
+    <div class="content">
+      <img class="ab-f" data-src="public/static/img/p6d3.png?v=8">
+    </div>
+  </div>
+  <div class="ab-f dialog p6-dialog4">
+    <div class="content">
+      <img class="ab-f" data-src="public/static/img/p6d4.png?v=8">
+    </div>
+  </div>
+  <div class="p1-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+</div>
+<!-- p7 好友进来首页，展示贺卡 -->
+<div class="page p7  ">
+  <div class="p1-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+  <div class="content">
+    <div class="p7-card"></div>
+    <div class="p7-btn-box">
+      <button class="btn-next p7-btn p7-btn-next p7-margin-right2"></button>
+      <button class="go-page1 p7-btn p7-btn-index"></button>
+    </div>
+  </div>
+</div>
+<!-- p8 拍照上传 -->
+<div class="page p8  ">
+  <div class="content">
+    <div class="p8-photo-box-box">
+      <div class="p8-photo-box p8-upload-btn"></div>
+    </div>
+    <div class="p8-cont"></div>
+    <div class="p8-btn-box">
+      <button class="p8-btn p8-reset-btn p8-upload-btn p8-margin-right2"></button>
+      <button class="p8-btn p8-ok-btn"></button>
+    </div>
+    <input type="file" name="file" class="p8-img-input" accept="image/*" capture="camera">
+  </div>
+</div>
+<!-- p9 成功解锁 -->
+<div class="page p9  ">
+  <div class="p1-user-icon p9-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+  <div class="content">
+    <div class="p9-3d-box">
+      <!--信封底面-->
+      <div class="p9-envelope2 p9-envelope-in">
+        <div class="p9-envelope2-img-box p9-envelope20">
+          <img data-src="public/static/img/p5_envelope20.png?v=8" alt="">
+        </div>
+        <div class="p9-envelope2-img-box p9-envelope21">
+          <img data-src="public/static/img/p5_envelope21.png?v=8" alt="">
+        </div>
+      </div>
+      <!--贺卡-->
+      <div class="p9-card-box">
+        <!--要保存的图-->
+        <img data-src="public/static/img/p11_empty_card.png?v=8" alt="" id="saveCardImg" class="p9-save-img">
+        <!--贺卡内容-->
+        <div class="p9-card p9-card-in">
+          <img data-src="public/static/img/p9_card.png?v=8" alt="" id="showCardImg">
+        </div>
+        <!--贺卡封皮-->
+        <div class="p9-card-cover p9-card-in">
+          <img class="p9-cover-sprite sprite"></img>
+          <!--<img data-src="public/static/img/p3-content1.png?v=8" alt="" id="showCardCoverImg">-->
+        </div>
+      </div>
+      <!--信封上面-->
+      <div class="p9-envelope1 p9-envelope-in"></div>
+      <!--信封盖-->
+      <div class="p9-envelope3 p9-envelope-in"></div>
+    </div>
+    <!--提示文案-->
+    <div class="p9-cont-tips"></div>
+    <!--按钮-->
+    <div class="p9-btn-box clearfix">
+      <div class="p9-btn-friend fl"></div>
+      <div class="p9-btn-again fl go-page1"></div>
+    </div>
+  </div>
+</div>
+<!-- p10 解锁失败 -->
+<div class="page p10  ">
+  <div class="p1-user-icon">
+    <img class="p1-user-icon-img" data-src="public/static/img/user_icon.png?v=8" alt="">
+  </div>
+  <div class="content">
+    <div class="p10-card"></div>
+    <div class="p10-btn-box">
+      <button class="go-page7 p10-btn p10-btn-again p10-margin-right2"></button>
+      <button class="go-page1 p10-btn p10-btn-index"></button>
+    </div>
+  </div>
+</div>
+<!-- p11 个人中心 -->
+<div class="page p11">
+  <div class="content">
+    <div class="p11-content1"></div>
+    <!-- Swiper -->
+    <div class="swiper-container p11-swiper">
+      <div class="swiper-wrapper p11-wrapper" id="userListBox">
+        <div class="swiper-slide">
+          <div class="slick-img-box">
+            <img data-src="public/static/img/p11_empty_card.png?v=8" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next p11-swiper-next-btn p11-swiper-btn"></div>
+      <div class="swiper-button-prev p11-swiper-prev-btn p11-swiper-btn"></div>
+    </div>
+    <div class="p11-btn-box">
+      <button class="go-page1 p11-btn"></button>
+    </div>
+  </div>
+</div>
+
+
+<!--分享浮层-->
+<div class="dialog d-share">
+  <img src="public/static/img/sharehint.png?v=8" alt="" class="d-share-hint">
+</div>
+<!--分享朋友圈浮层-->
+<div class="dialog d-share-friend2">
+  <img src="public/static/img/sharehint.png?v=8" alt="" class="d-share-hint">
+  <div class="share-input-box">
+    <input name="share_friend_desc" class="share-friend-input"/>
+    <button class="share-friend-input-btn"></button>
+  </div>
+</div>
+<!--错误弹窗-->
+<div class="dialog d-error">
+  <div class="d-error-box">
+    <div class="d-error-box-text">错误弹框错误弹框错误弹框错误弹框错误弹框错误弹框错误弹框错误弹框</div>
+  </div>
+</div>
+
+<div class="dialog d-loading">
+  <div class="loading-div ab-c"></div>
+</div>
+<script>
+  var app = window.app || {
+    currentPage: 0,
+    root: 'public/static/',
+    root0: "",
+    pages: {},
+    dialogs: {},
+    audios: {},
+    common: {},
+    isMultiLoad: true, //是否分步加载
+    shareId: '{$share_id}', //初始分享id
+    shareIdNew: '', //新生成的分享id
+    username: '', //收件人昵称
+    userImg: '', //收件人照片
+    cardImgId: '', //收件人卡片的模板
+    userBlessings: '', //卡片上的祝福语
+    showCard: '', //展示卡片路径
+    shareImgUrl: '', //分享图片
+    shareTitle: '', //分享标题
+    shareDesc: '', //分享描述
+    shareLink: '', //分享链接
+    nickName: '小鱼', //微信昵称
+    tplId: '0', //贺卡封皮id  0-默认
+    userImgList: '',    //个人中心信息数组
+    p11MySwiper: ''
+
+  };
+</script>
+<script src="public/static/js/swiper.min.js?v=8"></script>
+<!-- <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js?v=8"></script> -->
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.js?v=8"></script>
+<script src="//cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js?v=8"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js?v=8"></script>
+<!-- <script src="//dev.benbun.com/web/home/zhanggan/vconsole/vconsole.min.js?v=8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js?v=8"></script>
+<!-- build:js js/lib.js?v=8 -->
+<script src="public/static/js/lib/exif.js?v=8"></script>
+<script src="public/static/js/lib/lrz2.js?v=8"></script>
+<script src="public/static/js/lib/hammer.min.js?v=8"></script>
+<script src="public/static/js/lib/objecttransformer.js?v=8"></script>
+<script src="public/static/js/lib/imgcropper.js?v=8"></script>
+<!-- <script src="public/static/js/lib/jquery.parallax.z.js?v=8"></script>  -->
+<!-- lib目录下的js文件写在这里 -->
+<!-- endbuild -->
+<!-- build:js js/main.js?v=8 -->
+<script src="public/static/js/MovieSprites2.js?v=8"></script>
+<script src="public/static/js/iscroll.js?v=8"></script>
+<script src="public/static/js/loader.js?v=8"></script>
+<!-- <script src="public/static/js/ip.audios.js?v=8"></script> -->
+<script src="public/static/js/ip.bgm.js?v=8"></script>
+<script src="public/static/js/app.js?v=8"></script>
+<script src="public/static/js/common.js?v=8"></script>
+<script src="public/static/js/p1.js?v=8"></script>
+<script src="public/static/js/p2.js?v=11"></script>
+<script src="public/static/js/p3.js?v=8"></script>
+<script src="public/static/js/p4.js?v=9"></script>
+<script src="public/static/js/p5.js?v=11"></script>
+<script src="public/static/js/p6.js?v=8"></script>
+<script src="public/static/js/p7.js?v=10"></script>
+<script src="public/static/js/p8.js?v=8"></script>
+<script src="public/static/js/p9.js?v=8"></script>
+<script src="public/static/js/p10.js?v=8"></script>
+<script src="public/static/js/p11.js?v=8"></script>
+<script src="public/static/js/dialog.js?v=8"></script>
+<script src="public/static/js/index.js?v=8"></script>
+<script src="public/static/js/wxshare.js?v=8"></script>
+<script src="public/static/js/landscape.js?v=8"></script>
+<script src="public/static/js/scroll.js?v=8"></script>
+<!-- endbuild -->
+<script type="text/javascript">
+  (function () {
+    function getLink() {
+      if (window.location.host.indexOf('dev.benbun.com') >= 0) {
+        return 'http://dev.benbun.com/web/baidu/aigshengdan/';
+      } else {
+        return 'http://w.benbun.com/baidu/aigshengdan/';
+      }
+    }
+
+
+    app.link = getLink();
+
+
+    app.shareTitle = '送给TA一份只有TA能打开的圣诞祝福';
+    app.shareDesc = '什么，居然还有这种操作？';
+    // app.shareLink = app.link + '?share_id=' + app.shareId;
+    app.shareLink = app.link;
+    app.shareImgUrl = app.link + 'public/static/img/share' + app.tplId + '.jpg?v=8';
+
+    window.wxshare.config({
+      title: app.shareTitle,
+      desc: app.shareDesc,
+      timelineText: app.shareTitle,
+      link: app.shareLink,
+      imgUrl: app.shareImgUrl,
+      onSuccess: function () {
+        $('.d-share').hide();
+        $('.d-share-friend2').hide();
+      }
+    });
+
+  }());
+</script>
+</body>
+
+</html>

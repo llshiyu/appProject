@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>帧动画</title>
+  <style type="text/css">
+  @charset "utf-8";
+  .page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    font-size: 2rem;
+  }
+
+  .spriteImg {
+    width: 375px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+  }
+
+  .p1 {
+    background: green;
+  }
+
+  .stop {
+    font-size: 3rem;
+    color: white;
+  }
+
+  .play,
+  .revert {
+    font-size: 3rem;
+    color: white;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="page p1">
+    <!-- 播放一遍之后插入到这个地方-->
+    <!-- <div class="spritebox"> -->
+    <img class="spriteImg">
+    <!-- </div> -->
+    <button class="stop">stop</button>
+    <button class="resume">resume</button>
+    <button class="play">play</button>
+  </div>
+  <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script> 
+  <script src="js/MovieSprites2.js"></script> 
+  <script type="text/javascript">
+  $(function() {
+    var sprite = new MovieSprites($('.spriteImg')[0], {
+      totalFrame: 45,
+      frameOrigin: 0,
+      imgNameFixDightNum:2,
+      imgRootName: 'img/card1/Card-1',
+      finishCallback: function() {
+        console.log('finishCallback：function');
+      }
+    });
+    sprite.play();
+    $('.play').click(function() {
+      sprite.play();
+    });
+    $('.resume').click(function() {
+      sprite.resume();
+    });
+    $('.stop').click(function() {
+      sprite.stop();
+    });
+  });
+  </script>
+</body>
+
+</html>

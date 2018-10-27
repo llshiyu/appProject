@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>小牛</title>
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+  <!-- build:css css/main.css -->
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <link href="css/lib/mui.min.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/lib/mui.min.css"/>
+  <!-- endbuild -->
+</head>
+
+<body>
+
+<!--个人信息页-->
+<div class="p5">
+  <div class="content ">
+    <!--顶部banner图-->
+    <div class="p5-tit">
+      <div class="p5-tit-img-box">
+        <img src="img/header-bg.jpg" class="p5-tit-img">
+      </div>
+      <div class="p1-header-font">
+        <span class="p1-header-font-btn btn-activity-rules">活动规则</span>
+        <span class="p1-header-font-btn btn-my-prize go-myPrize">我的奖品</span>
+      </div>
+      <span class="p5-tit-txt">完善信息</span>
+    </div>
+    <!--完善信息表单-->
+    <div class="p5-content">
+      <div class="p5-content-border p5-content-border-up">
+        <img src="img/border-up.png">
+      </div>
+      <form action="index.html" id="form">
+        <div class="form-group clearfix">
+          <label class="form-group-txt stars">姓名</label>
+          <div class="form-group-input">
+            <input class="" name="username" type="text" placeholder="请输入姓名">
+            <span class="error-tips error-tips-username">请输入姓名!</span>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <label class="form-group-txt stars">电话</label>
+          <div class="form-group-input">
+            <input class="" name="phone" type="tel" placeholder="请输入电话">
+            <span class="error-tips error-tips-phone">请输入电话!</span>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <label class="form-group-txt stars">收货地址</label>
+          <div class="form-group-input">
+            <input class="" name="address" type="text" placeholder="请输入收货地址">
+            <span class="error-tips error-tips-address">请输入收货地址!</span>
+          </div>
+        </div>
+      </form>
+      <div class="p5-content-border p5-content-border-down">
+        <img src="img/border-down.png">
+      </div>
+    </div>
+    <!--返回首页 完善信息按钮-->
+    <div class="p5-footer">
+      <span class="p5-btn btn-submit">确认</span>
+      <span class="p5-btn margin-left go-index">返回</span>
+    </div>
+    <!--免责声明-->
+    <div class="statement-footer">
+      免责声明：最终解释权归<span class="statement-name">北京小牛公众号</span>所有
+    </div>
+  </div>
+</div>
+<!--活动规则-->
+<div class="dialog d-rule">
+  <div class="d-rule-box">
+    <div class="d-rule-title">活动规则</div>
+    <div class="d-rule-content  d-touchmove">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <ul class="d-content-indent iscroll-box">
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+        <li>邀请好友帮忙充电</li>
+        <li>每位好友只能充一次电</li>
+        <li>每次增加20%电量</li>
+      </ul>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-rule-btn">关 闭</div>
+  </div>
+</div>
+<!--活动结束-->
+<div class="dialog d-over">
+  <div class="d-over-box">
+    <div class="d-over-title">很遗憾</div>
+    <div class="d-over-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-over-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-over-txt">
+        <span>活动已结束</span><br>
+        <span>请关注公众号</span>
+        <br><span>参加更多活动</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!--提示消息-->
+<div class="tip-box">
+  <div class="tip-infor"></div>
+</div>
+<script>
+  var app = window.app || {
+    endTime: '2017-11-11 22:00:00',
+    startTime: '2017-10-01 22:00:00',
+  };
+</script>
+
+<script src="js/lib/jquery.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/lib/mui.min.js"></script>
+<script src="js/person.js"></script>
+<script src="js/publicJs.js"></script>
+<script src='js/wxshare.js'></script>
+<script src='js/iscroll.js'></script>
+<script src='js/landscape.js'></script>
+
+
+</body>
+<script type="text/javascript">
+  (function () {
+
+    var u = navigator.userAgent;
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    var inp = $("input"),
+      win = $(window),
+      bod = $("body,html"),
+      box = $('.p5-content'),
+      winH = win.height();
+
+    if(isAndroid){
+      if (is_weixn()) {
+        inp.each(function () {
+          var t = $(this),
+            tTop = t.offset().top,
+            tType = t.prop('type');
+          if (is_text(tType)) {
+            t.on('focus', function (event) {
+              bod.height(winH + 260);
+              bod.animate({scrollTop: tTop - 100 + 'px'}, 200);
+            });
+            bod.on('click', function (event) {
+              bod.height('100%');
+              bod.animate({scrollTop: tTop + 'px'}, 200);
+            });
+          }
+        });
+      }
+    }
+  }());
+
+  /***
+   * 判断是否为文本框
+   * @param type
+   * @returns {boolean}
+   */
+  function is_text(type) {
+    if (type == "text" || type == "number" || type == "password" || type == "tel" || type == "url" || type == "email") {
+      return true;
+    }
+  }
+
+  /***
+   * 判断是否是微信
+   * @returns {boolean}
+   */
+  function is_weixn() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+      return true;
+    } else {
+      return false;
+    }
+  }
+</script>
+</html>

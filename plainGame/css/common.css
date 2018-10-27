@@ -1,0 +1,273 @@
+﻿/**公共样式库**//**元素初始化样式 如:body input select button ..**/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input ,button{margin: 0;padding: 0;border: none;outline: 0;font-family: STHeitiSC-Light;font: inherit;vertical-align: middle;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6{-webkit-text-size-adjust: none;}
+html, body{width: 100%;height: 100%;background: #F2F2F4;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+body{}
+ol, ul{list-style: none;}
+ul,li{margin:0;padding: 0;list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after{content: '';content: none;}
+ins, a{text-decoration: none;}
+del{text-decoration: line-through;}
+table{border-collapse: collapse;border-spacing: 0;}
+img{display: inline-block;width: 100%;height: 100%;}
+input, textarea{border: none;background: none;outline: none;-webkit-appearance: none;}
+*{
+  word-break:break-all;word-wrap:break-word ;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;-ms-tap-highlight-color: transparent;-o-tap-highlight-color: transparent;tap-highlight-color: transparent;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
+input:focus::-webkit-input-placeholder{color: transparent;}
+textarea:focus::-webkit-input-placeholder{color: transparent;}
+input[type="search"]{-webkit-appearance: none;}
+input::-webkit-search-cancel-button{display: none;}
+
+
+
+/****业务部分****/
+
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.icon-over{
+    display: block;
+    width: 100%;
+    height: 460px;
+    background-image: url("../imgs/gameover.png");
+}
+.icon-score{
+    width: 26px;
+    height: 37px;
+    background-image: url("../imgs/star.png");
+}
+.icon-time{
+    width: 35px;
+    height: 35px;
+    background-image: url("../imgs/time.png");
+}
+.icon-hp{
+    width: 87px;
+    height: 31px;
+}
+.start-pages{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 200;
+    text-align: center;
+    padding-bottom: 294px;
+}
+.game-over-pack{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 200;
+    text-align: center;
+    padding-bottom: 160px;
+}
+.icon-fvhwarplanes{
+    width: 100%;
+    height: 474px;
+    display: block;
+    margin-bottom: 45px;
+    background-image: url("../imgs/fvhwarplanes.png");
+
+}
+.icon-hint-img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 281px;
+    display: block;
+    background-image: url("../imgs/intro.png");
+}
+.click-close{
+    position: absolute;
+    right: 60px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+}
+p.button-icon{
+    margin-top: 24px;
+}
+.icon-easy{
+    width: 224px;
+    height: 60px;
+    background-image: url("../imgs/easy-0.png");
+}
+.icon-easy:hover{
+    background-image: url("../imgs/easy-1.png");
+}
+.icon-hard{
+    width: 224px;
+    height: 60px;
+    background-image: url("../imgs/hard-0.png");
+}
+.icon-hard:hover{
+    background-image: url("../imgs/hard-1.png");
+}
+.icon-st{
+    width: 224px;
+    height: 60px;
+    background-image: url("../imgs/st_btn01.png");
+}
+.icon-st:hover{
+    background-image: url("../imgs/st_btn02.png");
+}
+.btn-l-r{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+}
+.btn-l-r>i:first-child{
+    float: left;
+}
+.btn-l-r>i:first-child+i{
+    float: right;
+}
+.icom-pause{
+    position: absolute;
+    bottom: 210px;
+    left: 0;
+    width: 100%;
+}
+.icom-pause>i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 73px;
+    height: 73px;
+    background-image: url("../imgs/FireBtn0001.png");
+    z-index: 100;
+}
+.big-b{
+    position: absolute;
+    bottom: 414px;
+    left: 0;
+    width: 100%;
+}
+.big-b>i:first-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 73px;
+    height: 73px;
+    background-image: url("../imgs/bullet1button.png");
+    z-index: 100;
+}
+.big-b>i:first-child+i{
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 73px;
+    height: 73px;
+    background-image: url("../imgs/bullet2button.png");
+    z-index: 101;
+}
+.suspend{
+    position: absolute;
+    bottom: 310px;
+    left: 0;
+    width: 100%;
+}
+.suspend>i:first-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 73px;
+    height: 73px;
+    background-image: url("../imgs/playBtn0001.png");
+    z-index: 100;
+}
+.suspend>i:first-child+i{
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 73px;
+    height: 73px;
+    background-image: url("../imgs/pauseBtn0002.png");
+    z-index: 101;
+}
+.icon-left{
+    width: 55px;
+    height: 55px;
+    background-image: url("../imgs/leftbtn0001.png");
+}
+.icon-right{
+    width: 55px;
+    height: 55px;
+    background-image: url("../imgs/Controlbtn0001.png");
+}
+.operate-title>p{
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+}
+.operate-title>p>span{
+    margin-left: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+.operate-title>p:first-child{
+    left: 30px;
+}
+.operate-title>p:first-child+p{
+    left: 350px;
+}
+.operate-title>p:first-child+p+p{
+    right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <title>小牛</title>
+  <!-- 解释：build用来构架项目时候压缩代码 -->
+  <!-- build:js js/fontbase.js -->
+  <script src="js/fontbase.js"></script>
+  <!-- endbuild -->
+  <!-- build:css css/main.css -->
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/anim.css" rel="stylesheet"/>
+  <link href="css/lib/mui.min.css" rel="stylesheet"/>
+  <!-- 将所有的keyframes写在这里，方便复用 -->
+  <link href="css/index.css" rel="stylesheet"/>
+  <link href="css/cssloader.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/lib/mui.min.css"/>
+  <!-- endbuild -->
+</head>
+
+<body>
+<!-- 第1页  iscroll-box-->
+<div class="p1">
+  <div class="content ">
+    <!--顶部banner图-->
+    <header class="p1-header">
+      <div class="p1-header-img-box">
+        <img src="img/header-bg.jpg" class="p1-header-img">
+      </div>
+      <div class="p1-header-font">
+        <span class="p1-header-font-btn btn-activity-rules">活动规则</span>
+        <span class="p1-header-font-btn btn-my-prize go-myPrize">我的奖品</span>
+      </div>
+    </header>
+    <!--倒计时-->
+    <div class="p1-header-time">
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-day1">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-day2">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <span class="p1-header-time-text">天</span>
+
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-hour1">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-hour2">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <span class="p1-header-time-text">时</span>
+
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-minute1">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <div class="p1-timefont-box">
+        <span class="p1-header-timefont time-minute2">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <span class="p1-header-time-text">分</span>
+
+      <div class="p1-timefont-box">
+        <span class="time-second1 p1-header-timefont">0</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <div class="p1-timefont-box">
+        <span class="time-second2 p1-header-timefont">1</span>
+        <span class="p1-header-timefont-bg">8</span>
+      </div>
+      <span class="p1-header-time-text">秒</span>
+    </div>
+    <!--进度条-电池-->
+    <div class="p1-battery-progress-box">
+      <div class="mui-progressbar-box">
+        <div id="p1Progress" class="mui-progressbar" data-progress="100" >
+          <span></span>
+        </div>
+      </div>
+      <!--<div class="p1-battery-img-box">-->
+        <!--<img src="img/battery.png" />-->
+      <!--</div>-->
+      <div class="p1-battery-txt">
+        <div class="p1-battery-box">
+          <span class="p1-pregress pregress1"></span>
+          <span class="p1-pregress-bg">8</span>
+        </div>
+        <div class="p1-battery-box">
+          <span class="p1-pregress pregress2">6</span>
+          <span class="p1-pregress-bg">8</span>
+        </div>
+        <div class="p1-battery-box">
+          <span class="p1-pregress pregress3">1</span>
+          <span class="p1-pregress-bg">8</span>
+        </div>
+        <div class="p1-battery-box">
+          <span class="p1-sign">%</span>
+        </div>
+      </div>
+    </div>
+    <!--好友帮忙充电详情-->
+    <div class="p1-friends-help">
+      <ul class="p1-friends-help-txt">
+        <li>好友<span class="friends-name">大一大一</span>帮你充电<span class="friends-electricity">10</span>%</li>
+        <li>好友<span class="friends-name">龙二龙二龙二</span>帮你充电<span class="friends-electricity">20</span>%</li>
+        <li>好友<span class="friends-name">张三</span>帮你充电<span class="friends-electricity">30</span>%</li>
+        <li>好友<span class="friends-name">李四</span>帮你充电<span class="friends-electricity">40</span>%</li>
+        <li>好友<span class="friends-name">王五</span>帮你充电<span class="friends-electricity">50</span>%</li>
+        <li>好友<span class="friends-name">刘小六</span>帮你充电<span class="friends-electricity">100</span>%</li>
+        <li>好友<span class="friends-name">赵七</span>帮你充电<span class="friends-electricity">70</span>%</li>
+      </ul>
+    </div>
+    <!--九宫格抽奖-->
+    <div class="p1-luck-draw">
+      <div id="box" class="clearfix">
+        <div class="luckDrawBox luckDrawBox-1" data-id="1" data-cont="1" data-tit="蓝色电动车">
+          <img src="img/u49.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-2" data-id="2" data-cont="2" data-tit="20元优惠券">
+          <img src="img/1.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-3" data-id="3" data-cont="3" data-tit="中大奖了！">
+          <img src="img/u5.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-8" data-id="4" data-cont="8" data-tit="新人优惠券">
+          <img src="img/2.jpg" alt="">
+        </div>
+        <div class="luckDrawBox p1-luck-draw-btn" >
+          <img src="img/ready.png">
+        </div>
+        <div class="luckDrawBox luckDrawBox-4" data-id="5" data-cont="4" data-tit="pig">
+          <img src="img/share.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-7" data-id="6" data-cont="7" data-tit="红色电动车">
+          <img src="img/u506.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-6" data-id="7" data-cont="6" data-tit="10元优惠券">
+          <img src="img/3.jpg" alt="">
+        </div>
+        <div class="luckDrawBox luckDrawBox-5" data-id="8" data-cont="5" data-tit="摄像头">
+          <img src="img/4.png" alt="">
+        </div>
+      </div>
+      <span class="luck-draw-txt">每次抽奖消耗10%电量</span>
+    </div>
+    <!--找人充电按钮-->
+    <div class="p1-btn">
+      <div class="p1-luck-draw-btn">立即抽奖</div>
+      <div class="share-btn">找人充电</div>
+    </div>
+    <!--免责声明-->
+    <div class="statement-footer">
+      免责声明：最终解释权归<span class="statement-name">北京小牛公众号</span>所有
+    </div>
+  </div>
+</div>
+
+<!--电量不足-->
+<div class="dialog d-electricity">
+  <div class="d-electricity-box">
+    <div class="d-electricity-content">
+      <div class="d-electricity-img-box">
+        <img src="img/battery-err.png">
+      </div>
+      <div class="d-electricity-txt">
+        <span>电量不足</span><br>
+        <span>请充电</span>
+      </div>
+    </div>
+    <div class="d-electricity-btn">找人充电</div>
+  </div>
+</div>
+
+<!--恭喜中奖-->
+<div class="dialog d-winning" >
+  <div class="d-winning-box">
+    <div class="d-winning-title">恭喜你</div>
+    <div class="d-winning-img-box">
+      <img src="img/win.png">
+    </div>
+    <div class="d-winning-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-winning-txt">
+        <span>获得 <span class="prizeName">天猫猫猫猫券</span></span><br>
+        <!--分情况显示-->
+        <span class="fillInAddress">请完善信息</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-winning-btn isPerson">去领奖</div>
+    <div class="d-winning-btn d-winning-close">返回</div>
+  </div>
+</div>
+
+<!--谢谢惠顾-->
+<div class="dialog d-noWinning" >
+  <div class="d-noWinning-box">
+    <div class="d-noWinning-title">谢谢参与</div>
+    <div class="d-noWinning-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-noWinning-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-noWinning-txt">
+        <span>很遗憾</span><br>
+        <span>换个姿势再来一次！</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-noWinning-btn">再来一次</div>
+  </div>
+</div>
+
+<!--关注公众号-->
+<div class="dialog d-follow">
+  <div class="d-follow-box">
+    <div class="d-follow-title">公众号</div>
+    <div class="d-follow-img-box">
+      <img src="img/win.png">
+    </div>
+    <div class="d-follow-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-follow-txt">
+        <div class="d-img-box">
+          <img src="img/code.png" alt="">
+        </div>
+        <span>请先关注公众号</span><br>
+        <span>再参加活动</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-follow-btn">关闭</div>
+  </div>
+</div>
+
+<!--完善信息-->
+<div class="dialog d-fillInInformation">
+  <div class="d-fillInInformation-box">
+    <div class="d-fillInInformation-title">完善信息</div>
+    <div class="d-fillInInformation-img-box">
+      <img src="img/win.png">
+    </div>
+    <div class="d-fillInInformation-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-fillInInformation-txt">
+        <span>请先完善信息</span><br>
+        <span>再来参加抽奖噢</span>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+    <div class="d-fillInInformation-btn go-person">去完善</div>
+  </div>
+</div>
+
+<!--活动结束-->
+<div class="dialog d-over">
+  <div class="d-over-box">
+    <div class="d-over-title">很遗憾</div>
+    <div class="d-over-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-over-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-over-main clearfix">
+        <div class="d-over-txt">
+          <span>活动已结束</span><br>
+          <span>请关注公众号</span>
+          <br><span>参加更多活动</span>
+        </div>
+        <div class="d-over-code">
+          <img src="img/code.png" alt="">
+        </div>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--活动未开始-->
+<div class="dialog d-notStart">
+  <div class="d-notStart-box">
+    <div class="d-notStart-title">请等待</div>
+    <div class="d-notStart-img-box">
+      <img src="img/over.png">
+    </div>
+    <div class="d-notStart-content">
+      <div class="d-border d-border-up">
+        <img src="img/border-up.png" alt="">
+      </div>
+      <div class="d-notStart-main clearfix">
+        <div class="d-notStart-txt">
+          <span>活动未开始</span><br>
+          <span>请关注公众号</span>
+          <br><span>参加更多活动</span>
+        </div>
+        <div class="d-notStart-code">
+          <img src="img/code.png" alt="">
+        </div>
+      </div>
+      <div class="d-border d-border-down">
+        <img src="img/border-down.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--活动规则-->
+<div class="dialog d-rule">
+  <div class="d-rule-box">
+      <div class="d-rule-title">活动规则</div>
+      <div class="d-rule-content  d-touchmove">
+        <div class="d-border d-border-up">
+          <img src="img/border-up.png" alt="">
+        </div>
+        <ul class="d-content-indent">
+          <li>邀请好友帮忙充电</li>
+          <li>每位好友只能充一次电</li>
+          <li>每次增加20%电量</li>
+          <li>邀请好友帮忙充电</li>
+          <li>每位好友只能充一次电</li>
+          <li>每次增加20%电量</li>
+          <li>邀请好友帮忙充电</li>
+          <li>每位好友只能充一次电</li>
+          <li>每次增加20%电量</li>
+          <li>邀请好友帮忙充电</li>
+          <li>每位好友只能充一次电</li>
+          <li>每次增加20%电量</li>
+        </ul>
+        <div class="d-border d-border-down">
+          <img src="img/border-down.png" alt="">
+        </div>
+      </div>
+      <div class="d-rule-btn">关 闭</div>
+  </div>
+</div>
+
+<!--找人充电 弹窗（d-share）-->
+<div class="dialog d-share">
+  <img src="img/share.png" alt="" class="d-share-hint">
+</div>
+<!--提示消息-->
+<div class="tip-box">
+  <div class="tip-infor"></div>
+</div>
+<script>
+  var app = window.app || {
+    endTime: '2019-11-11 22:00:00',
+    startTime: '2016-10-01 22:00:00',
+    integralJiang: 10//每次抽奖消耗电量
+  };
+</script>
+
+<script src="js/lib/jquery.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/lib/mui.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/publicJs.js"></script>
+<script src='js/wxshare.js'></script>
+<script src='js/iscroll.js'></script>
+<!--横屏显示-->
+<script src='js/landscape.js'></script>
+
+
+</body>
+<script type="text/javascript">
+  (function () {
+
+    function getLink() {
+      if (window.location.host.indexOf('dev.benbun.com') >= 0) {
+        return 'http://dev.benbun.com/web/zhilifang/xiongmaohuijia/';
+      } else {
+        return 'http://w.benbun.com/zhilifang/xiongmaohuijia/';
+      }
+    }
+
+    app.link = getLink();
+
+    window.wxshare.config({
+      title: '我是微信分享标题(待修改)',
+      desc: '我是微信分享描述...(待修改)',
+      link: app.link,
+      imgUrl: app.link + 'img/share.jpg'
+    });
+  }());
+</script>
+</html>
