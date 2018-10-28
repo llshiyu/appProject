@@ -67,6 +67,10 @@ function init() {
   for (let i = 0; i < dom.length; i++) {
     let jumpName = dom[i].dataset.name;
     dom[i].addEventListener('click', function (e) {
+      if(jumpName == 'shengdanzhufu'){
+        window.location.href=URL+jumpName;
+        return
+      }
       rightBox.style.display = 'block';
       iframeBox.src = URL + jumpName;
       if(jumpName==='2048Game'){
