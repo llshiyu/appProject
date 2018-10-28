@@ -514,6 +514,7 @@ body.modal-open {
 
 .p1-friends-help-txt li{
   height: 2rem;
+  line-height: 2rem;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;

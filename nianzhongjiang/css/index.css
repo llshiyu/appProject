@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
   width: 100%;
-  max-width: 600px;
+  /*max-width: 600px;*/
   height: 100%;
   position: absolute;
   top: 0;
@@ -444,8 +444,8 @@ body {
 
 .p2-calculator-txt {
   width: 35rem;
-  margin: 3.4rem auto 0;
-  height: 22.3rem;
+  margin: 5.4rem auto 0;
+  height: 25.3rem;
   background: #000;
   font-family: textFont;
   color: #fff;
@@ -457,14 +457,14 @@ body {
 .p2-total-num {
   font-size: 3rem;
   position: absolute;
-  top: 2rem;
+  top: 6rem;
   right: 1rem;
 }
 
 .p2-now-num {
   font-size: 5rem;
   position: absolute;
-  top: 7rem;
+  top: 12rem;
   right: 1rem;
 }
 

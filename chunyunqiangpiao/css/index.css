@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
   width: 100%;
-  max-width: 600px;
+  /*max-width: 600px;*/
   height: 100%;
   position: absolute;
   top: 0;
@@ -110,7 +110,7 @@ body {
 }
 .p0-card-box{
   position: absolute;
-  top: 26.6rem;
+  top: 29.5rem;
   /*left: 14.6rem;*/
   left: 0;
   right: 0;
