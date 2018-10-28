@@ -35,6 +35,7 @@
   left: 0;
   font-family: "楷体", italics, "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
+  width: 100%;
   margin: auto;
   background-image: url("../img/bg.jpg");
   background-size: cover;
