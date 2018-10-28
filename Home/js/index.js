@@ -64,9 +64,15 @@ function init() {
   for (let i = 0; i < dom.length; i++) {
     let jumpName = dom[i].dataset.name;
     dom[i].addEventListener('click', function (e) {
-      rightBox.style.display = 'block';
-      iframeBox.src = URL + jumpName;
-      // window.location.href=URL+jumpName;
+      if(jumpName==='2048Game'){
+        rightBox.style.display = 'block';
+        rightBox.style.background='#fff';
+        iframeBox.src = URL + jumpName;
+        iframeBox.style.transform='scale(0.9,0.9)';
+      }
+      else{
+        window.location.href=URL+jumpName;
+      }
     }, false);
   }
   goBackDom.addEventListener('click',function (e) {
