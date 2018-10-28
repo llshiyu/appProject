@@ -74,6 +74,8 @@ function init() {
         rightBox.style.background='#fff';
         // iframeBox.src = URL + jumpName;
         iframeBox.style.transform='scale(0.9,0.9)';
+      }else{
+        iframeBox.style.transform='scale(1,1)';
       }
       // else{
       //   window.location.href=URL+jumpName;
