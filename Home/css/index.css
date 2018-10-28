@@ -6,8 +6,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  /*right: 0;*/
+  /*bottom: 0;*/
   margin: auto;
   width: 100%;
   height: 100%;
@@ -30,6 +30,9 @@
   width: 100%;
 }
 .box {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: "楷体", italics, "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
   margin: auto;
@@ -37,7 +40,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
-  position: relative;
+  /*position: relative;*/
 }
 .box .content {
   text-align: center;
