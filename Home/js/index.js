@@ -1,5 +1,10 @@
 var URL = '../';
-
+var dom = document.getElementsByClassName('title');
+var rightBox = document.getElementById('rightBox');
+var iframeBox = document.getElementById('contIframe');
+var goBackDom = document.getElementById('goBack');
+var showBox = document.getElementById('showBox');
+var loadingImgBox = document.getElementById('loadingImgBox');
 (function () {
   imgBackground = new Image(); //每次加载完都会绘制一次图片
   imgBackground.src = 'img/bg.jpg';
@@ -55,12 +60,9 @@ $(function () {
 });
 
 function init() {
-  document.getElementById('showBox').style.display = 'block';
-  document.getElementById('loadingImgBox').style.display = 'none';
-  let dom = document.getElementsByClassName('title');
-  let rightBox = document.getElementById('rightBox');
-  let iframeBox = document.getElementById('contIframe');
-  let goBackDom = document.getElementById('goBack');
+  showBox.style.display = 'block';
+  loadingImgBox.style.display = 'none';
+
   for (let i = 0; i < dom.length; i++) {
     let jumpName = dom[i].dataset.name;
     dom[i].addEventListener('click', function (e) {
