@@ -6,6 +6,7 @@ var goBackDom = document.getElementById('goBack');
 var showBox = document.getElementById('showBox');
 var loadingImgBox = document.getElementById('loadingImgBox');
 (function () {
+  iframeBox.src = ' ';
   imgBackground = new Image(); //每次加载完都会绘制一次图片
   imgBackground.src = 'img/bg.jpg';
   imgBackground.onload = function () { //背景图片加载完场
@@ -80,7 +81,10 @@ function init() {
     }, false);
   }
   goBackDom.addEventListener('click',function (e) {
+    console.log(iframeBox.src)
+    iframeBox.src = ' ';
+    iframeBox.contentWindow.document.body.innerText = "";
+    console.log(iframeBox.src,999)
     rightBox.style.display = 'none';
-    iframeBox.src = ''
   })
 }
