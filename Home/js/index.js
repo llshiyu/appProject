@@ -87,10 +87,8 @@ function init() {
     }, false);
   }
   goBackDom.addEventListener('click',function (e) {
-    console.log(iframeBox.src)
     iframeBox.src = ' ';
     iframeBox.contentWindow.document.body.innerText = "";
-    console.log(iframeBox.src,999)
     rightBox.style.display = 'none';
   })
 }

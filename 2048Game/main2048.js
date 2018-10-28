@@ -2,14 +2,12 @@ board = [];//游戏数据
 score = 0;//游戏分数
 const mapSize = 4;//
 needNewPoint = 0;
-/*去掉iphone手机滑动默认行为*/
-$('body').on('touchmove touchstart', function (event) {
-  event.preventDefault();
-});
-document.addEventListener('touchmove', function(e) {
-  e.preventDefault();
-});
 $(document).ready(function () {
+  function stopScrolling(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  document.addEventListener('touchmove',stopScrolling,false);
   newgame();
 });
 
