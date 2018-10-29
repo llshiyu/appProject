@@ -1,4 +1,5 @@
 var URL = '../';
+var Url = 'w.benbun.com/';
 var dom = document.getElementsByClassName('title');
 var rightBox = document.getElementById('rightBox');
 var iframeBox = document.getElementById('contIframe');
@@ -67,23 +68,17 @@ function init() {
   for (let i = 0; i < dom.length; i++) {
     let jumpName = dom[i].dataset.name;
     dom[i].addEventListener('click', function (e) {
-      // if(jumpName == 'shengdanzhufu'){
-      //   window.location.href=URL+jumpName;
-      //   return
-      // }
-      rightBox.style.display = 'block';
-      iframeBox.src = URL + jumpName;
+      // iframeBox.src = URL + jumpName;
       if(jumpName==='2048Game'){
         // rightBox.style.display = 'block';
         rightBox.style.background='#fff';
-        // iframeBox.src = URL + jumpName;
+        iframeBox.src = URL + jumpName;
         iframeBox.style.transform='scale(0.9,0.9)';
       }else{
-        iframeBox.style.transform='scale(1,1)';
+          iframeBox.src = Url + jumpName;
+          iframeBox.style.transform='scale(1,1)';
       }
-      // else{
-      //   window.location.href=URL+jumpName;
-      // }
+        rightBox.style.display = 'block';
     }, false);
   }
   goBackDom.addEventListener('click',function (e) {
